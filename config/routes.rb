@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  root 'demo#index'
   get 'demo/index'
+  get "demo/redirect"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
