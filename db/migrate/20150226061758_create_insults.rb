@@ -6,5 +6,6 @@ class CreateInsults < ActiveRecord::Migration
       t.boolean "answered", :default => false	
       t.timestamps null: false
     end
+    add_index("insults", "text")
   end
 end
