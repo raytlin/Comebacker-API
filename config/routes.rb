@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   # get 'insults/show'
 
-
+  get 'insults/create'
 
   resources :users do 
     member do 

@@ -1,8 +1,11 @@
 class InsultsController < ApplicationController
   def create
-  	text = params[:text]
-  	insult = Insult.new(:text => text)
-  	insult.save
+  	@text = params[:text]
+  	insult = Insult.new
+  	insult.text = @text
+  	if insult.save
+  		redirect_to(:action => 'index')
+  	end
   end
 
   def index
