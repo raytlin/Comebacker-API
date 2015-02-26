@@ -2,7 +2,7 @@ class CreateComebacks < ActiveRecord::Migration
   def change
     create_table :comebacks do |t|
       t.string "text"
-      t.string "user"
+      t.integer "user_id"
       t.integer "insult_id"
       t.timestamps null: false
     end
