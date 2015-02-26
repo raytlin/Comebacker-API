@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  
+  resources :users do 
+    member do 
+      get :delete
+    end
+  end
+
+  resources :insults do 
+    member do 
+      get :delete
+    end
+  end
+
+  resources :comebacks do 
+    member do 
+      get :delete
+    end
+  end
+
   root 'demo#index'
   get 'demo/index'
   get "demo/redirect"
