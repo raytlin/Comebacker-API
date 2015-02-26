@@ -1,5 +1,8 @@
 class InsultsController < ApplicationController
   def create
+  	text = params[:text]
+  	insult = Insult.new(:text => text)
+  	insult.save
   end
 
   def index
@@ -10,7 +13,7 @@ class InsultsController < ApplicationController
   def show
   end
 
-  def comebacks
+  def getComebacks
   	@comebacks = Comeback.where(:insult_id => params[:id].to_i).order("created_at DESC")
   	render :json => @comebacks
   end
