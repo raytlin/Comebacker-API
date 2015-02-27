@@ -4,7 +4,7 @@ class CreateComebacks < ActiveRecord::Migration
       t.string "text"
       t.integer "user_id"
       t.integer "insult_id"
-      #t.integer "score", :default => 0
+      t.integer "score", :default => 0
       t.timestamps null: false
     end
     add_index("comebacks", "insult_id")
