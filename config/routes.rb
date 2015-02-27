@@ -1,4 +1,37 @@
 Rails.application.routes.draw do
+  
+  # get 'comebacks/create'
+
+  # get 'comebacks/index'
+
+  # get 'comebacks/show'
+
+  # get 'insults/create'
+
+  # get 'insults/index'
+
+  # get 'insults/show'
+
+  get 'insults/create'
+
+  resources :users do 
+    member do 
+      get :delete
+    end
+  end
+
+  resources :insults do 
+    member do 
+      get :delete
+    end
+  end
+
+  resources :comebacks do 
+    member do 
+      get :delete
+    end
+  end
+
   root 'demo#index'
   get 'demo/index'
   get "demo/redirect"
@@ -57,4 +90,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  match ':controller(/:action(/:id))', :via => :get
+
 end
