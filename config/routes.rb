@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   # get 'insults/index'
 
   # get 'insults/show'
-
+  
+  #manaul routes for the creating bc using get instead of post for submission of data
   get 'insults/create'
+  get 'comebacks/create'
 
   resources :users do 
     member do 
