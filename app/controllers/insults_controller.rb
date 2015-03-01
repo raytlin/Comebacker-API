@@ -28,7 +28,7 @@ class InsultsController < ApplicationController
   	render :json => insult
   end
 
-  def getComebacks
+  def getComebacksForInsultID
   	comebacks = Comeback.where(:insult_id => params[:id].to_i).order("created_at DESC")
   	render :json => comebacks
   end
