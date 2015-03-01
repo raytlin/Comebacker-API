@@ -8,7 +8,7 @@ class InsultsController < ApplicationController
   	allInsults.each do |i|
 
   	end
-  	if text != nil 
+  	if text != nil && text != Insult.last.text
 	  	insult = Insult.new
 	  	insult.text = text
 	  	if insult.save

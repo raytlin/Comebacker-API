@@ -3,7 +3,7 @@ class ComebacksController < ApplicationController
   	text = params[:text]
   	insult_id = params[:insult_id]
 
-  	if insult_id != nil && text != nil
+  	if insult_id != nil && text != nil && test != Comeback.last.text
   		comeback = Comeback.new 
   		comeback.text = text
   		comeback.insult_id = insult_id.to_i
