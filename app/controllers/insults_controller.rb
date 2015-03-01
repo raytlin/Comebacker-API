@@ -1,14 +1,8 @@
 class InsultsController < ApplicationController
   def create
   	text = params[:text]
-  	allInsults = Insult.all
-
-  	#check all insults to make sure there are no repeats. this might be a big problem later on 
-  	#this was only added bc it kept putting in repeats for some reason
-  	allInsults.each do |i|
-
-  	end
-  	if text != nil && text != Insult.last.text
+  	
+  	if insult.text == nil || (text != nil && text != Insult.last.text)
 	  	insult = Insult.new
 	  	insult.text = text
 	  	if insult.save
