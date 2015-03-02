@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #manaul routes for the creating bc using get instead of post for submission of data
   get 'insults/create'
   get 'comebacks/create'
+  get 'insults/getLimitedTo'
 
   resources :users do 
     member do 
