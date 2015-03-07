@@ -2,7 +2,7 @@ class InsultsController < ApplicationController
   def create
   	text = params[:text]
   	
-  	if text == nil || (text != nil && text != Insult.last.text)
+  	if text != nil || (text != nil && text != Insult.last.text)
 	  	insult = Insult.new
 	  	insult.text = text
 	  	if insult.save
